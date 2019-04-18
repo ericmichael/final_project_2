@@ -10,4 +10,5 @@ describe Post do
   it { should have_property           :id }
   it { should have_property           :title }
   it { should have_property           :content }
+  it { should have_property           :user_id }
 end

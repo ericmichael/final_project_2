@@ -26,6 +26,7 @@ class Post
   property :id, Serial
   property :title, Text
   property :content, Text
+  property :user_id, Integer
   property :created_at, DateTime
 end
 
