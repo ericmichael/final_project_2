@@ -21,10 +21,18 @@ class User
     end
 end
 
+class Post
+  include DataMapper::Resource
+  property :id, Serial
+  property :title, Text
+  property :content, Text
+  property :created_at, DateTime
+end
+
 # Perform basic sanity checks and initialize all relationships
 # Call this when you've defined all your models
 DataMapper.finalize
 
 # automatically create the post table
 User.auto_upgrade!
-
+Post.auto_upgrade!
